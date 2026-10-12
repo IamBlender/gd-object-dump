@@ -1,0 +1,11 @@
+{
+	"geode": "v5.0.0",
+	"gd": {
+		"win": "*"
+	},
+	"version": "v1.0.0",
+	"id": "gdcraft.objectdump",
+	"name": "Object Dump",
+	"developer": "gdcraft",
+	"description": "Writes Geometry Dash's object table (IDs, sprite names, types, hitboxes) to a file."
+}
