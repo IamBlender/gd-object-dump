@@ -1,5 +1,5 @@
 {
-	"geoid": "gdcraft.objectdump",
+	"id": "gdcraft.objectdump",
 	"geode": "5.0.0",
 	"version": "v1.0.0",
 	"name": "Object Dump",
