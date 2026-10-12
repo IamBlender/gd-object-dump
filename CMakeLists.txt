@@ -15,6 +15,16 @@ else()
     message(STATUS "Found Geode: $ENV{GEODE_SDK}")
 endif()
 
+# Pin bindings to a stable commit to avoid the CCFileUtilsWin32.h redeclaration error on main
+include(CPM)
+CPMAddPackage(
+    NAME bindings
+    GITHUB_REPOSITORY geode-sdk/bindings
+    GIT_TAG v2.2081 # Or a stable commit hash if v2.2081 tag needs a specific ref
+    DOWNLOAD_ONLY YES
+)
+set(GEODE_BINDINGS_REPO_PATH ${bindings_SOURCE_DIR})
+
 add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
 setup_geode_mod(${PROJECT_NAME})
